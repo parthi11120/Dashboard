@@ -1,0 +1,920 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>DashStack</title>
+  <link rel="stylesheet" href="style.css">
+  <link href='https://unpkg.com/fullcalendar@5.3.1/main.min.css' rel='stylesheet' />
+<script src='https://unpkg.com/fullcalendar@5.3.1/main.min.js'></script>
+
+</head>
+<body>
+  <div class="container">
+    <div class="sidebar">
+      <div class="logo">
+          <span>DashStack</span>
+      </div>
+      <nav>
+          <ul>
+              <li><a href="#content">Dashboard</a></li>
+              <li><a href="#products-section">Products</a></li>
+              <li><a href="#favorites">Favorites</a></li>
+              <li><a href="#inbox-section">Inbox</a></li>
+              <li><a href="#order-list-section">Order Lists</a></li>
+              <li><a href="#product-table">Product Stock</a></li>
+              <li class="pages-heading"><b>PAGES</b></li>
+              <li><a href="#pricing-table">Pricing</a></li>
+              <li><a href="#calendar">Calendar</a></li>
+              <li><a href="#todo">To-Do</a></li>
+              <li><a href="#contact ">Contact</a></li>
+              <li><a href="#invoice">Invoice</a></li>
+              <li><a href="#uicontrol">UI Elements</a></li>
+              <li><a href="#team">Team</a></li>
+              <li><a href="#">Table</a></li>
+              <li><a href="#">Settings</a></li>
+              <li><a href="#">Logout</a></li>
+          </ul>
+      </nav>
+  </div>
+  </div>
+  <div class="main-content">
+    <div class="header">
+    <div class="search-bar">
+        <input type="text" placeholder="Search">
+    </div>
+    <div class="profile">
+        <div class="notification">
+            <i class="fas fa-bell"></i>
+        </div>
+        <div class="lang">
+            <i class="fas fa-globe-americas"></i>
+            <span>English</span>
+            <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="user">
+            <img src="C:\Users\parth\OneDrive\Desktop\project\images\contact6.jpeg" alt="Profile">
+            <span>Parthi Patel</span>
+            <span>Admin</span>
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </div>
+   </div>
+   <section class="main" id="content">
+      <div class="content">
+        <h1>Dashboard</h1>
+        <div class="cards">
+            <div class="card">
+                <div class="icon">
+                    <i class="fas fa-user"></i>
+                </div>
+                <div class="data">
+                    <h2>Total User</h2>
+                    <h1>40,689</h1>
+                    <p>8.5% Up from yesterday</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="icon">
+                    <i class="fas fa-box"></i>
+                </div>
+                <div class="data">
+                    <h2>Total Order</h2>
+                    <h1>10,293</h1>
+                    <p>1.3% Up from past week</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="icon">
+                    <i class="fas fa-money-bill-wave"></i>
+                </div>
+                <div class="data">
+                    <h2>Total Sales</h2>
+                    <h1>$89,000</h1>
+                    <p>4.3% Down from yesterday</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="icon">
+                    <i class="fas fa-sync-alt"></i>
+                </div>
+                <div class="data">
+                    <h2>Total Pending</h2>
+                    <h1>2,040</h1>
+                    <p>1.8% Up from yesterday</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+          <h2>Sales Details</h2>
+          <div class="chart">
+            <canvas id="myChart"></canvas>
+            <select>
+              <option value="october">October</option>
+              <option value="november">November</option>
+              <option value="december">December</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="products-section" id="products-section">
+      <h2>Product</h2>
+      <div class="promo-banner">
+          <p>September 09-25</p>
+          <h2>Enjoy free home delivery in this summer</h2>
+          <p>Designer Dresses - Pick from trendy Designer Dress.</p>
+          <button class="get-started-btn">Get Started</button>
+      </div>
+  
+      <div class="product-list">
+          <div class="product-item">
+              <img src="images/img1.jpg" alt="Apple Watch Series 4">
+              <h3>Apple Watch Series 4</h3>
+              <p class="price">₹20000.00</p>
+              <p class="rating">★★★★★ (131)</p>
+              <button class="edit-btn">Edit Product</button>
+          </div>
+          <div class="product-item">
+            <img src="images\img_2.jpeg" alt="Samsung Galaxy S21">
+            <h3>Samsung Galaxy S21</h3>
+            <p class="price">₹69,999.00</p>
+            <p class="rating">★★★★☆ (92)</p>
+            <button class="edit-btn">Edit Product</button>
+        </div>
+        
+        <div class="product-item">
+            <img src="images\img_3.jpeg" alt="Sony WH-1000XM4 Headphones">
+            <h3>Sony WH-1000XM4 Headphones</h3>
+            <p class="price">₹29,990.00</p>
+            <p class="rating">★★★★★ (215)</p>
+            <button class="edit-btn">Edit Product</button>
+        </div>
+        
+        <div class="product-item">
+            <img src="images\img_5.jpeg" alt="Bose SoundLink Revolve+">
+            <h3>Bose SoundLink Revolve+</h3>
+            <p class="price">₹24,500.0</p>
+            <p class="rating">★★★★☆ (78)</p>
+            <button class="edit-btn">Edit Product</button>
+        </div>
+        
+        <div class="product-item">
+            <img src="images\img_6.jpeg" alt="iPad Pro 12.9-inch">
+            <h3>iPad Pro 12.9-inch</h3>
+            <p class="price">₹1,00,900.0</p>
+            <p class="rating">★★★★★ (162)</p>
+            <button class="edit-btn">Edit Product</button>
+        </div>
+
+        <div class="product-item">
+          <img src="images\img_4.jpeg" alt="Dell XPS 13 Laptop">
+          <h3>Dell XPS 13 Laptop</h3>
+          <p class="price">₹1,14,999.0</p>
+          <p class="rating">★★★★☆ (54)</p>
+          <button class="edit-btn">Edit Product</button>
+      </div>
+        
+  </section>
+
+  <!-- Favorites Section -->
+  <section class="favorites" id="favorites">
+    <h2>Favorites</h2>
+    <div class="products">
+        <div class="product">
+            <img src="images/img1.jpg" alt="Apple Watch Series 4">
+            <div class="product-info">
+                <h3>Apple Watch Series 4</h3>
+                <div class="price">₹10078.36</div>
+                <div class="rating">★★★★★ (131)</div>
+                <button>Edit Product</button>
+            </div>
+            <i class="fas fa-heart"></i>
+        </div>
+        <div class="product">
+            <img src="images/img2.jpeg" alt="Air-Max-270">
+            <div class="product-info">
+                <h3>Air-Max-270</h3>
+                <div class="price">₹5039.18</div>
+                <div class="rating">★★★★★ (64)</div>
+                <button>Edit Product</button>
+            </div>
+            <i class="fas fa-heart"></i>
+        </div>
+        <div class="product">
+            <img src="images/img3.jpeg" alt="Minimal Chair Tool">
+            <div class="product-info">
+                <h3>Minimal Chair Tool</h3>
+                <div class="price">₹2065.22</div>
+                <div class="rating">★★★★★ (63)</div>
+                <button>Edit Product</button>
+            </div>
+            <i class="fas fa-heart"></i>
+        </div>
+        <div class="product">
+            <img src="images/img4.jpg" alt="Amazfit Vip">
+            <div class="product-info">
+                <h3>Amazfit Vip</h3>
+                <div class="price">₹15117.53</div>
+                <div class="rating">★★★★★ (111)</div>
+                <button>Edit Product</button>
+            </div>
+            <i class="fas fa-heart"></i>
+        </div>
+        <div class="product">
+            <img src="images/img5.webp" alt="Gumbo Mouse">
+            <div class="product-info">
+                <h3>Gumbo Mouse</h3>
+                <div class="price">₹2939.52</div>
+                <div class="rating">★★★★★ (80)</div>
+                <button>Edit Product</button>
+            </div>
+            <i class="fas fa-heart"></i>
+        </div>
+        <div class="product">
+            <img src="images/img6.jpg" alt="Camera Tripod">
+            <div class="product-info">
+                <h3>Camera Tripod</h3>
+                <div class="price">₹5459.11</div>
+                <div class="rating">★★★★★ (93)</div>
+                <button>Edit Product</button>
+            </div>
+            <i class="fas fa-heart"></i>
+        </div>
+    </div>
+  </section>
+
+  <section class="inbox-section" id="inbox-section">
+    <div class="inbox-header">
+        <h1>Inbox</h1>
+        <button class="compose-btn">+ Compose</button>
+    </div>
+
+    <div class="inbox-content">
+        <div class="mail-list">
+            <ul>
+                <li>Inbox <span class="mail-count">1253</span></li>
+                <li>Starred <span class="mail-count">245</span></li>
+                <li>Sent <span class="mail-count">24,532</span></li>
+                <li>Draft <span class="mail-count">09</span></li>
+                <li>Spam <span class="mail-count">14</span></li>
+                <li>Important <span class="mail-count">18</span></li>
+                <li>Bin <span class="mail-count">9</span></li>
+            </ul>
+        </div>
+        <div class="email-list">
+            <div class="email-search-bar">
+                <input type="text" placeholder="Search mail">
+            </div>
+            <div class="emails">
+                <!-- Example email row -->
+                <div class="email-row">
+                    <div class="email-info">
+                        <span class="email-star">&#9734;</span>
+                        <span class="email-sender">Julia Jalal</span>
+                        <span class="email-tag primary">Primary</span>
+                        <span class="email-subject">Our Bachelor of Commerce program is ACBSP-accredited.</span>
+                    </div>
+                    <div class="email-time">8:38 AM</div>
+                </div>
+                <div class="email-row">
+                  <div class="email-info">
+                      <span class="email-star">&#9734;</span>
+                      <span class="email-sender">David Smith</span>
+                      <span class="email-tag promotions">Promotions</span>
+                      <span class="email-subject">Exclusive 50% off on all electronics, this week only!</span>
+                  </div>
+                  <div class="email-time">9:15 AM</div>
+              </div>
+              <div class="email-row">
+                  <div class="email-info">
+                      <span class="email-star">&#9734;</span>
+                      <span class="email-sender">Linda Scott</span>
+                      <span class="email-tag social">Social</span>
+                      <span class="email-subject">You have a new friend request from Linda.</span>
+                  </div>
+                  <div class="email-time">10:05 AM</div>
+              </div>
+              <div class="email-row">
+                  <div class="email-info">
+                      <span class="email-star">&#9734;</span>
+                      <span class="email-sender">Mark Johnson</span>
+                      <span class="email-tag updates">Updates</span>
+                      <span class="email-subject">Your order #12456 has been shipped!</span>
+                  </div>
+                  <div class="email-time">11:30 AM</div>
+              </div>
+              <div class="email-row">
+                  <div class="email-info">
+                      <span class="email-star">&#9734;</span>
+                      <span class="email-sender">Sarah Brown</span>
+                      <span class="email-tag primary">Primary</span>
+                      <span class="email-subject">Meeting Reminder: Team Sync at 2 PM</span>
+                  </div>
+                  <div class="email-time">12:45 PM</div>
+              </div>
+              <div class="email-row">
+                  <div class="email-info">
+                      <span class="email-star">&#9734;</span>
+                      <span class="email-sender">Google</span>
+                      <span class="email-tag updates">Updates</span>
+                      <span class="email-subject">Security alert: New login from Chrome on Windows</span>
+                  </div>
+                  <div class="email-time">2:00 PM</div>
+              </div>
+              <div class="email-row">
+                  <div class="email-info">
+                      <span class="email-star">&#9734;</span>
+                      <span class="email-sender">Facebook</span>
+                      <span class="email-tag social">Social</span>
+                      <span class="email-subject">John Doe liked your photo</span>
+                  </div>
+                  <div class="email-time">3:22 PM</div>
+                </div>
+            </div>
+        </div>
+      </div>
+  </section>
+
+   <!-- Order List Section -->
+   <section class="order-list-section" id="order-list-section">
+    <h2>Order Lists</h2>
+    <div class="filter-bar">
+      <div class="filter-icon">
+          &#xf0b0;
+      </div>
+      <div class="filter-item">
+          <label for="filter-date">Filter By</label>
+          <select id="filter-date">
+              <option>14 Feb 2024</option>
+              <option>11 March 2024</option>
+              <option>14 April 2024</option>
+              <option>14 May 2024</option>
+              <!-- Add other date options here -->
+          </select>
+      </div>
+      <div class="filter-item">
+          <label for="filter-order-type">Order Type</label>
+          <select id="filter-order-type">
+              <option>All</option>
+              <option>Electric</option>
+              <option>Gas</option>
+              <!-- Add other order types here -->
+          </select>
+      </div>
+      <div class="filter-item">
+          <label for="filter-order-status">Order Status</label>
+          <select id="filter-order-status">
+              <option>All</option>
+              <option>Completed</option>
+              <option>Pending</option>
+              <option>Canceled</option>
+              <!-- Add other statuses here -->
+          </select>
+      </div>
+      <div class="reset-filter">
+          <a href="#">&#8635; Reset Filter</a>
+      </div>
+  </div>
+  
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Address</th>
+          <th>Date</th>
+          <th>Type</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>00001</td>
+          <td>Christine Brooks</td>
+          <td>089 Kutch Green Apt. 448</td>
+          <td>14 Feb 2019</td>
+          <td>Electric</td>
+          <td class="status completed">Completed</td>
+        </tr>
+        <tr>
+          <td>00003</td>
+          <td>John Doe</td>
+          <td>234 Elm Street, Apt. 101</td>
+          <td>15 Feb 2019</td>
+          <td>Gadget</td>
+          <td class="status pending">Pending</td>
+      </tr>
+      <tr>
+          <td>00004</td>
+          <td>Mary Smith</td>
+          <td>567 Oak Avenue, Suite 303</td>
+          <td>16 Feb 2019</td>
+          <td>Furniture</td>
+          <td class="status shipped">Shipped</td>
+      </tr>
+      <tr>
+          <td>00005</td>
+          <td>James Johnson</td>
+          <td>890 Pine Lane, Bldg. 2</td>
+          <td>17 Feb 2019</td>
+          <td>Clothing</td>
+          <td class="status cancelled">Cancelled</td>
+      </tr>
+      <tr>
+          <td>00006</td>
+          <td>Patricia Lee</td>
+          <td>123 Maple Road, Unit 5</td>
+          <td>18 Feb 2019</td>
+          <td>Food</td>
+          <td class="status completed">Completed</td>
+      </tr>
+      <tr>
+          <td>00007</td>
+          <td>Robert Brown</td>
+          <td>456 Birch Blvd, Floor 6</td>
+          <td>19 Feb 2019</td>
+          <td>Electronics</td>
+          <td class="status processing">Processing</td>
+      </tr>
+      <tr>
+          <td>00008</td>
+          <td>Linda Green</td>
+          <td>789 Cedar Street, Room 12</td>
+          <td>20 Feb 2019</td>
+          <td>Appliance</td>
+          <td class="status pending">Pending</td>
+      </tr>
+      </tbody>
+    </table>
+  </section>
+</br></br>
+
+  <section class="product-table" id="product-table">
+    <h2>Product Stock</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Image</th>
+                <th>Product Name</th>
+                <th>Category</th>
+                <th>Price</th>
+                <th>Piece</th>
+                <th>Available Color</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Repeat this for each product -->
+            <tr>
+              <td><img src="C:\Users\parth\OneDrive\Desktop\project\images\img1.jpg" alt="Product Image" class="product-image"></td>
+              <td>Apple Watch Series 4</td>
+              <td>Digital Product</td>
+              <td>₹57,373.50</td>
+              <td>63</td>
+              <td>
+                <span class="color-dot" style="background-color: black;"></span>
+                <span class="color-dot" style="background-color: pink;"></span>
+              </td>
+              <td>
+                <button class="action-btn edit-btn">&#9998;</button>
+                <button class="action-btn delete-btn">&#10006;</button>
+              </td>
+            </tr>
+            <tr>
+              <td><img src="C:\Users\parth\OneDrive\Desktop\project\images\img_2.jpeg" alt="Product Image" class="product-image"></td>
+              <td>Samsung Galaxy S21</td>
+              <td>Smartphone</td>
+              <td>₹66,436.85</td>
+              <td>85</td>
+              <td>
+                <span class="color-dot" style="background-color: blue;"></span>
+                <span class="color-dot" style="background-color: silver;"></span>
+              </td>
+              <td>
+                <button class="action-btn edit-btn">&#9998;</button>
+                <button class="action-btn delete-btn">&#10006;</button>
+              </td>
+            </tr>
+            
+            <tr>
+              <td><img src="images/img_3.jpeg" alt="Product Image" class="product-image"></td>
+              <td>Sony WH-1000XM4</td>
+              <td>Headphones</td>
+              <td>₹29,101.67</td>
+              <td>45</td>
+              <td>
+                <span class="color-dot" style="background-color: black;"></span>
+                <span class="color-dot" style="background-color: silver;"></span>
+              </td>
+              <td>
+                <button class="action-btn edit-btn">&#9998;</button>
+                <button class="action-btn delete-btn">&#10006;</button>
+              </td>
+            </tr>
+            
+            <tr>
+              <td><img src="images/image-url-3.jpg" alt="Product Image" class="product-image"></td>
+              <td>Nintendo Switch OLED</td>
+              <td>Gaming Console</td>
+              <td>₹29,019.35</td>
+              <td>120</td>
+              <td>
+                <span class="color-dot" style="background-color: red;"></span>
+                <span class="color-dot" style="background-color: blue;"></span>
+              </td>
+              <td>
+                <button class="action-btn edit-btn">&#9998;</button>
+                <button class="action-btn delete-btn">&#10006;</button>
+              </td>
+            </tr>
+            
+            <tr>
+              <td><img src="images/image-url-4.jpg" alt="Product Image" class="product-image"></td>
+              <td>MacBook Pro 16-inch</td>
+              <td>Laptop</td>
+              <td>₹1,99,476.85</td>
+              <td>32</td>
+              <td>
+                <span class="color-dot" style="background-color: gray;"></span>
+                <span class="color-dot" style="background-color: spacegray;"></span>
+              </td>
+              <td>
+                <button class="action-btn edit-btn">&#9998;</button>
+                <button class="action-btn delete-btn">&#10006;</button>
+              </td>
+            </tr>
+            
+            <tr>
+              <td><img src="images/image-url-5.jpg" alt="Product Image" class="product-image"></td>
+              <td>iPad Air 2022</td>
+              <td>Tablet</td>
+              <td>₹49,806.85</td>
+              <td>78</td>
+              <td>
+                <span class="color-dot" style="background-color: green;"></span>
+                <span class="color-dot" style="background-color: pink;"></span>
+              </td>
+              <td>
+                <button class="action-btn edit-btn">&#9998;</button>
+                <button class="action-btn delete-btn">&#10006;</button>
+              </td>
+            </tr>
+            
+            <tr>
+              <td><img src="images/image-url-6.jpg" alt="Product Image" class="product-image"></td>
+              <td>Fitbit Charge 5</td>
+              <td>Fitness Tracker</td>
+              <td>₹12,468.34</td>
+              <td>112</td>
+              <td>
+                <span class="color-dot" style="background-color: purple;"></span>
+                <span class="color-dot" style="background-color: black;"></span>
+              </td>
+              <td>
+                <button class="action-btn edit-btn">&#9998;</button>
+                <button class="action-btn delete-btn">&#10006;</button>
+              </td>
+            </tr>
+            
+            <tr>
+              <td><img src="images/image-url-7.jpg" alt="Product Image" class="product-image"></td>
+              <td>GoPro Hero 10</td>
+              <td>Action Camera</td>
+              <td>₹33,259.17</td>
+              <td>54</td>
+              <td>
+                <span class="color-dot" style="background-color: blue;"></span>
+                <span class="color-dot" style="background-color: black;"></span>
+              </td>
+              <td>
+                <button class="action-btn edit-btn">&#9998;</button>
+                <button class="action-btn delete-btn">&#10006;</button>
+              </td>
+            </tr>
+            
+            <tr>
+              <td><img src="images/image-url-8.jpg" alt="Product Image" class="product-image"></td>
+              <td>Kindle Paperwhite</td>
+              <td>E-Reader</td>
+              <td>₹10,808.67</td>
+              <td>88</td>
+              <td>
+                <span class="color-dot" style="background-color: black;"></span>
+                <span class="color-dot" style="background-color: white;"></span>
+              </td>
+              <td>
+                <button class="action-btn edit-btn">&#9998;</button>
+                <button class="action-btn delete-btn">&#10006;</button>
+              </td>
+            </tr>
+            
+            <tr>
+              <td><img src="images/image-url-9.jpg" alt="Product Image" class="product-image"></td>
+              <td>Oculus Quest 2</td>
+              <td>VR Headset</td>
+              <td>₹24,861.85</td>
+              <td>64</td>
+              <td>
+                <span class="color-dot" style="background-color: white;"></span>
+                <span class="color-dot" style="background-color: black;"></span>
+              </td>
+              <td>
+                <button class="action-btn edit-btn">&#9998;</button>
+                <button class="action-btn delete-btn">&#10006;</button>
+              </td>
+            </tr>
+            
+            <tr>
+              <td><img src="images/image-url-10.jpg" alt="Product Image" class="product-image"></td>
+              <td>Surface Pro 8</td>
+              <td>Tablet</td>
+              <td>₹91,381.85</td>
+              <td>40</td>
+              <td>
+                <span class="color-dot" style="background-color: platinum;"></span>
+                <span class="color-dot" style="background-color: graphite;"></span>
+              </td>
+              <td>
+                <button class="action-btn edit-btn">&#9998;</button>
+                <button class="action-btn delete-btn">&#10006;</button>
+              </td>
+            </tr>
+            
+            <tr>
+              <td><img src="images/image-url-11.jpg" alt="Product Image" class="product-image"></td>
+              <td>Apple AirPods Pro</td>
+              <td>Earbuds</td>
+              <td>₹20,704.35</td>
+              <td>96</td>
+              <td>
+                <span class="color-dot" style="background-color: white;"></span>
+                <span class="color-dot" style="background-color: black;"></span>
+              </td>
+              <td>
+                <button class="action-btn edit-btn">&#9998;</button>
+                <button class="action-btn delete-btn">&#10006;</button>
+              </td>
+            </tr>
+            
+            <tr>
+              <td><img src="images/image-url-12.jpg" alt="Product Image" class="product-image"></td>
+              <td>Google Nest Hub</td>
+              <td>Smart Display</td>
+              <td>₹8,231.85</td>
+              <td>150</td>
+              <td>
+                <span class="color-dot" style="background-color: chalk;"></span>
+                <span class="color-dot" style="background-color: charcoal;"></span>
+              </td>
+              <td>
+                <button class="action-btn edit-btn">&#9998;</button>
+                <button class="action-btn delete-btn">&#10006;</button>
+              </td>
+            </tr>
+            
+        </tbody>
+    </table>
+    <p>Showing 1 of 78</p>
+  </section>
+  <br><br>
+
+  <div class="favorites"  id="pricing">
+    <img src="images\pricing.png" alt="">
+  </div>
+
+  <h1>CALENDAR</h1><br>
+  <section class="calendar-section" id="calendar">
+    <div class="events-sidebar">
+        <button class="add-event-btn">+ Add New Event</button>
+        <h3>You are going to</h3>
+        <ul class="events-list">
+            <li>
+                <div class="event">
+                    <h4>Design Conference</h4>
+                    <p class="event-time">Today 07:19 AM</p>
+                    <span class="location">56 Davion Mission Suite 157</span>
+                </div>
+            </li>
+            <li>
+                <div class="event">
+                    <h4>Weekend Festival</h4>
+                    <p class="event-time">16 October 2024</p>
+                    <span class="location">853 Moore Flats, Sweden</span>
+                </div>
+            </li>
+            <li>
+                <div class="event">
+                    <h4>Glastonbury Festival</h4>
+                    <p class="event-time">20-22 October 2024</p>
+                    <span class="location">646 Walter Road Apt, Turks</span>
+                </div>
+            </li>
+        </ul>
+        <button class="see-more-btn">See More</button>
+    </div>
+
+    <div class="calendar-container">
+        <div class="calendar-header"></div>
+        <div id="calendar"></div>
+    </div>
+</section>
+
+  
+
+              <section class="contents" id="todo">
+                <h1>To-Do List</h1>
+                <div class="task-list">
+                    <div class="task">
+                        <input type="checkbox">
+                        <span>Meeting with CEO</span>
+                        <div class="actions">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-times"></i>
+                        </div>
+                    </div>
+                    <div class="task">
+                        <input type="checkbox">
+                        <span>Pick up kids from school</span>
+                        <div class="actions">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-times"></i>
+                        </div>
+                    </div>
+                    <div class="task">
+                        <input type="checkbox">
+                        <span>Shopping with Brother</span>
+                        <div class="actions">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-times"></i>
+                        </div>
+                    </div>
+                    <div class="task">
+                        <input type="checkbox" checked>
+                        <span>Review with HR</span>
+                        <div class="actions">
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-times"></i>
+                        </div>
+                    </div>
+                    <div class="task">
+                        <input type="checkbox">
+                        <span>Going to Dia's School</span>
+                        <div class="actions">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-times"></i>
+                        </div>
+                    </div>
+                    <div class="task">
+                        <input type="checkbox">
+                        <span>Check design files</span>
+                        <div class="actions">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-times"></i>
+                        </div>
+                    </div>
+                    <div class="task">
+                        <input type="checkbox">
+                        <span>Update File</span>
+                        <div class="actions">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-times"></i>
+                        </div>
+                    </div>
+                <button class="add-task">Add New Task</button>
+            </div>
+          </section>
+        </br></br>
+          <div class="content" id="contact" >
+            <h1 class="page-title">Contact</h1>
+            <div class="contactxs">
+                <div class="contact-card">
+                    <img src="C:\Users\parth\OneDrive\Desktop\project\images\contact1.jpeg" alt="Jason Price">
+                    <h3>Jason Price</h3>
+                    <p>kuhlman.jermey@yahoo.com</p>
+                    <button class="message-btn">Message</button>
+                </div>
+                <div class="contact-card">
+                    <img src="C:\Users\parth\OneDrive\Desktop\project\images\contact2.jpeg" alt="Duane Dean">
+                    <h3>Duane Dean</h3>
+                    <p>rusty.botsford@wilfrid.io</p>
+                    <button class="message-btn">Message</button>
+                </div>
+                <div class="contact-card">
+                    <img src="C:\Users\parth\OneDrive\Desktop\project\images\contact3.jpeg" alt="Jonathan Barker">
+                    <h3>Jonathan Barker</h3>
+                    <p>cora_haley@quinn.biz</p>
+                    <button class="message-btn">Message</button>
+                </div>
+                <div class="contact-card">
+                    <img src="C:\Users\parth\OneDrive\Desktop\project\images\contact4.jpeg" alt="Rosie Glover">
+                    <h3>Rosie Glover</h3>
+                    <p>lockman.marques@hotmail.com</p>
+                    <button class="message-btn">Message</button>
+                </div>
+                <div class="contact-card">
+                    <img src="C:\Users\parth\OneDrive\Desktop\project\images\contact5.jpeg" alt="Patrick Greer">
+                    <h3>Patrick Greer</h3>
+                    <p>pearlie.eichmann@trevion.net</p>
+                    <button class="message-btn">Message</button>
+                </div>
+                <div class="contact-card">
+                    <img src="C:\Users\parth\OneDrive\Desktop\project\images\contact6.jpeg" alt="Darrell Ortega">
+                    <h3>Darrell Ortega</h3>
+                    <p>chaya.shields@ferry.info</p>
+                    <button class="message-btn">Message</button>
+                </div>
+            </div>
+            <button class="add-contact-btn">Add New Contact</button>
+        </div>
+      </section>
+
+      <div class="content" id="invoice">
+        <h1 class="page-title">Invoice</h1>
+        <div class="invoice">
+          <div class="invoice-info">
+            <div>
+              <label>Invoice From:</label>
+              <p>Virginia Walker</p>
+              <p>9694 Krajcik Locks Suite 635</p>
+            </div>
+            <div>
+              <label>Invoice To:</label>
+              <p>Austin Miller</p>
+              <p>Brookview</p>
+            </div>
+            <div>
+              <label>Invoice Date:</label>
+              <p>12 May 2024</p>
+              <label>Due Date:</label>
+              <p>25 June 2023</p>
+            </div>
+          </div>
+          <table>
+            <thead>
+              <tr>
+                <th>Serial No.</th>
+                <th>Description</th>
+                <th>Quantity</th>
+                <th>Base Cost</th>
+                <th>Total Cost</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>Children Toy</td>
+                <td>2</td>
+                <td>$20</td>
+                <td>$80</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Makeup</td>
+                <td>2</td>
+                <td>$50</td>
+                <td>$100</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Asus Laptop</td>
+                <td>5</td>
+                <td>$100</td>
+                <td>$500</td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>Iphone X</td>
+                <td>4</td>
+                <td>$1000</td>
+                <td>$4000</td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="total">
+            Total = $4680
+          </div>
+          <div class="actions">
+            <button><i class="fas fa-print"></i></button>
+            <button class="send"><i class="fas fa-paper-plane"></i>Send</button>
+          </div>
+        </div>
+      
+  </section>
+       <div class="favorites"  id="uicontrol">
+        <img src="C:\Users\parth\OneDrive\Desktop\project\images\uicontrol.png" alt="">
+      </div>
+      
+      <div class="favorites" id="team">
+        <img src="C:\Users\parth\OneDrive\Desktop\project\images\team.png" alt="">
+      </div>
+      
+      <div class="favorites" id="table">
+        <img src="C:\Users\parth\OneDrive\Desktop\project\images\table.png" alt="">
+      </div>
+      
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="C:\Users\parth\OneDrive\Desktop\project\script.js"></script>
+</body>
+</html>
